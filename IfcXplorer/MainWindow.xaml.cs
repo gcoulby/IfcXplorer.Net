@@ -16,7 +16,6 @@ using ZipFile = System.IO.Compression.ZipFile;
 
 namespace IfcXplorer
 {
-    //TODO: Fix bug which causes cursors to disappear
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -39,7 +38,7 @@ namespace IfcXplorer
             FontSizeDecrease.InputGestures.Add(new KeyGesture(Key.OemMinus, ModifierKeys.Control));
             FontSizeReset.InputGestures.Add(new KeyGesture(Key.D0, ModifierKeys.Control));
             TextSearch.InputGestures.Add(new KeyGesture(Key.F3));
-            
+            Cursor = Cursors.AppStarting;
         }
 
         private void InitializeSettings()
