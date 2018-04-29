@@ -21,7 +21,7 @@ namespace IfcXplorer
     /// </summary>
     public partial class MainWindow
     {
-        private const string DefaultTitle = "IFC Toolkit";
+        private const string DefaultTitle = "IFC Xplorer";
         public static RoutedCommand FontSizeIncrease = new RoutedCommand("Increase Font Size", typeof(MainWindow));
         public static RoutedCommand FontSizeDecrease = new RoutedCommand("Decrease Font Size", typeof(MainWindow));
         public static RoutedCommand FontSizeReset = new RoutedCommand("Reset Font Size", typeof(MainWindow));
