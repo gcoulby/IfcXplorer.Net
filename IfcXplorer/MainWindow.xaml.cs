@@ -135,8 +135,8 @@ namespace IfcXplorer
         #region Theme
         private void ThemeSwitch(object sender, RoutedEventArgs e)
         {
-            var btn = (IconToggleButton)e.OriginalSource;
-            Settings.Default.NightMode = btn.IsChecked == true;
+            Settings.Default.NightMode = !Settings.Default.NightMode;
+            ThemeSwitchButton.IsChecked = Settings.Default.NightMode;
             SetTheme(Settings.Default.NightMode);
         }
 
