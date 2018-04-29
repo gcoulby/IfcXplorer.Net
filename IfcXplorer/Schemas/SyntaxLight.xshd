@@ -1,0 +1,67 @@
+﻿<SyntaxDefinition name="IFC" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+
+  <!--Color Palette-->
+
+  <Color name="Background" foreground="#FFFFFF" />
+  <Color name="Comment" fontStyle="italic" foreground="#657b83" />
+  <Color name="EntityName" foreground="#058ef4" />
+  <Color name="EntityTag" fontWeight="regular" foreground="#26A69A" />
+  <Color name="IfcConstant" foreground="#a400ea" />
+  <Color name="IfcString" foreground="#d52f2f" />
+  <Color name="NormalText" foreground="#323232" />
+  <Color name="SpecialChars" foreground="#657b83" />
+  <Color name="Hyperlinks" foreground="#268BD2" />
+  
+
+  <!-- This is the main ruleset. -->
+  <RuleSet>
+    <Span color="Comment" begin="//" />
+    <Span color="Comment" multiline="true" begin="/\*" end="\*/" />
+
+    <!--Strings-->
+    <Span color="IfcString">
+      <Begin>"</Begin>
+      <End>"</End>
+    </Span>
+    <Span color="IfcString" multiline="false" >
+      <Begin>'</Begin>
+      <End>'</End>
+    </Span>
+    
+    <!-- Hashtags -->
+    <Rule color="EntityTag" >
+      [#][0-9]+
+    </Rule>
+    
+    <!--IFC Names-->
+    <Rule color="EntityName">
+       IFC[\w]+
+    </Rule>
+    <!--Hyperlinks-->
+    <Rule color="Hyperlinks">
+       [\w]+[@][\w][.][\w]
+    </Rule>
+    
+    <!--IFCConstant-->
+    <Rule color="IfcConstant">
+      [.]([A-Z]+|([A-Z]+[_][A-Z]+)+)[.]
+
+    </Rule>
+    <!--Undefined-->
+    <Rule color="NormalText">
+      [$]
+    </Rule>
+    <!-- Digits -->
+    <Rule color="NormalText">
+      \b0[xX][0-9a-fA-F]+  # hex number
+      |    \b
+      (    \d+(\.[0-9]+)?   #number with optional floating point
+      |    \.[0-9]+         #or just starting with floating point
+      )
+      ([eE][+-]?([0-9])+) # optional exponent
+    </Rule>
+    <Rule color="SpecialChars">
+      [=]|[(]|[)]|[,]|[;]
+    </Rule>
+  </RuleSet>
+</SyntaxDefinition>
