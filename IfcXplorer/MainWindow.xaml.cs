@@ -16,6 +16,7 @@ using ZipFile = System.IO.Compression.ZipFile;
 
 namespace IfcXplorer
 {
+    //TODO: Fix bug which causes cursors to disappear
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
