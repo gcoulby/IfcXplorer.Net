@@ -7,14 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IfcXplorer", "IfcXplorer\If
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2B520F59-463B-4D0D-929C-120AEA698186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B520F59-463B-4D0D-929C-120AEA698186}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B520F59-463B-4D0D-929C-120AEA698186}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B520F59-463B-4D0D-929C-120AEA698186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B520F59-463B-4D0D-929C-120AEA698186}.Debug|x64.ActiveCfg = Debug|x64
+		{2B520F59-463B-4D0D-929C-120AEA698186}.Debug|x64.Build.0 = Debug|x64
+		{2B520F59-463B-4D0D-929C-120AEA698186}.Release|x64.ActiveCfg = Release|x64
+		{2B520F59-463B-4D0D-929C-120AEA698186}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

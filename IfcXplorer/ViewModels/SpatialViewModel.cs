@@ -16,9 +16,32 @@ namespace IfcXplorer.ViewModels
         public override IPersistEntity Entity => _spatialStructure;
 
 
-        public override string Name => !string.IsNullOrWhiteSpace(_spatialStructure.Name)
-            ? _spatialStructure.ExpressType.ExpressName.Substring(3) + " - " + _spatialStructure.Name.ToString()
-            : _spatialStructure.ExpressType.ExpressName.Substring(3);
+        public override string Name
+        {
+            get
+            {
+                var str = "";
+                var valid = false;
+                try
+                {
+                    valid = !string.IsNullOrWhiteSpace(_spatialStructure.Name);
+                    if (valid)
+                        str = _spatialStructure.ExpressType.ExpressName.Substring(3) + " - " + _spatialStructure.Name.ToString();
+                    else
+                        str = _spatialStructure.ExpressType.ExpressName.Substring(3);
+                }
+                catch (Exception e)
+                {
+                    str = _spatialStructure.ExpressType.ExpressName.Substring(3);
+                }
+
+                return str;
+            }
+        }
+
+        //public override string Name => !string.IsNullOrWhiteSpace(_spatialStructure.Name)
+        //    ? _spatialStructure.ExpressType.ExpressName.Substring(3) + " - " + _spatialStructure.Name.ToString()
+        //    : _spatialStructure.ExpressType.ExpressName.Substring(3);
 
         public SpatialViewModel(IIfcSpatialStructureElement spatialStructure, IXbimViewModel parent)
         {

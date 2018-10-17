@@ -121,12 +121,12 @@ namespace IfcXplorer
 
             NumberOfLines.Text = IfcReader.GetNumberOfLines().ToString();
             NumberOfInstances.Text = IfcReader.GetNumberOfInstances().ToString();
-
+            
+            //Populate the tree view browser
             using (var store = IfcStore.Open(file))
             {
                 var containment = TreeViewBuilder.ContainmentView(store.ReferencingModel);
                 SpatialTree.ItemsSource = containment;
-
             }
         }
 
